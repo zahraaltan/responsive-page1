@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thank You</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    font-family: Arial, sans-serif;
+}
+
+#dot {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: yellow;
+    box-shadow: 0 0 10px rgba(255, 255, 0, 0.8), 0 0 20px rgba(255, 255, 0, 0.6);
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    animation: pulse 1.5s infinite ease-in-out;
+    will-change: transform, box-shadow;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0.7;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.main-container {
+    text-align: center;
+    padding: 20px;
+    max-width: 400px;
+    width: 100%;
+}
+
+button {
+    width: 100%;
+    max-width: 300px;
+    margin: 20px auto 0;
+    display: block;
+    background: linear-gradient(90deg, #fdd835, #fbc02d);
+    border: none;
+    color: white;
+    font-size: 1.2em;
+    padding: 15px 0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(253, 216, 53, 0.5);
+}
+
+button:hover {
+    background: linear-gradient(90deg, #ff6f61, #e91e63);
+    box-shadow: 0 6px 12px rgba(233, 30, 99, 0.5);
+}
+
+.pg {
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+
+a.pulse {
+    color: #fbc02d;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+    display: inline-block;
+}
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    button {
+        font-size: 1em;
+        padding: 12px 0;
+    }
+
+    .main-container {
+        padding: 10px;
+        max-width: 90%;
+    }
+
+    #dot {
+        width: 15px;
+        height: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8em;
+    }
+
+    button {
+        font-size: 1em;
+        padding: 10px 0;
+    }
+
+    .main-container {
+        padding: 5px;
+    }
+
+    #dot {
+        width: 12px;
+        height: 12px;
+    }
+
+    a.pulse {
+        font-size: 1.1em;
+    }
+}
+</style>
+
+<body>
+  <div id="dot"></div>
+  <div class="main-container">
+    <div class="content">
+      <h1 class="fade-in">Thank You!</h1>
+      <p>Your table has been successfully reserved.</p>
+      <a href="index.html" class="pulse">Go Back</a>
+      
+    </div>
+  </div>
+  <script>
+    const dot = document.getElementById("dot");
+
+    document.addEventListener("mousemove", (e) => {
+        const mouseX = e.clientX;
+        const mouseY = e.clientY;
+
+        // the dot's position
+        dot.style.left = `${mouseX}px`;
+        dot.style.top = `${mouseY}px`;
+
+        // Change the glow effect dynamically based on mouse position
+        const glowSize = (mouseX + mouseY) % 40 + 10; // Adjust glow size dynamically
+        dot.style.boxShadow = `0 0 ${glowSize}px rgba(255, 255, 0, 0.8), 0 0 ${glowSize * 2}px rgba(255, 255, 0, 0.6)`; // Dynamic glow effect
+    });
+  </script>
+</body>
+</html>

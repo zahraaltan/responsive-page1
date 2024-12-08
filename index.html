@@ -1,0 +1,186 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BiteBuzz Restaurant</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    
+      <div class="ball">
+        <div class="flame"></div>
+      </div>
+    <!-- HEADER SECTION -->
+    <header>
+        <div class="hero-content">
+            <img src="logo.png" alt="Restaurant Logo" class="hero-logo">
+            <h1 class="hero-title">BiteBuzz</h1>
+            <p class="hero-tagline">Where Flavor Meets Excellence</p>
+            <button class="cta-button">Book a Table</button>
+           
+        </div>
+    </header>
+
+    <!-- MENU SECTION -->
+    <section id="menu">
+        <h2 class="section-title">Our Menu</h2>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <img src="dish1.jpg" alt="Dish 1">
+                <div class="overlay">Appetizers</div>
+            </div>
+            <div class="menu-item">
+                <img src="dish2.jpg" alt="Dish 2">
+                <div class="overlay">Main Course</div>
+            </div>
+            <div class="menu-item">
+                <img src="dish3.jpg" alt="Dish 3">
+                <div class="overlay">Desserts</div>
+            </div>
+            <div class="menu-item">
+                <img src="dish4.jpg" alt="Dish 4">
+                <div class="overlay">Beverages</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS SECTION -->
+    <section id="tests">
+        <h2 class="section-title">What Our Guests Are Saying</h2>
+        <div class="tests">
+            <div class="test">
+                <img src="costumer.jpg" alt="Customer">
+                <p>"A taste of heaven! The flavors are incredible and the ambiance perfect."</p>
+                <h3>- Abeera L.</h3>
+            </div>
+            <div class="test">
+                <img src="costumer.webp" alt="Customer">
+                <p>"Fantastic food, wonderful service. I’ll definitely be coming back!"</p>
+                <h3>- Misbah D.</h3>
+            </div>
+            <div class="test">
+                <img src="costumer3.jpg" alt="Customer">
+                <p>"Fantastic food, wonderful service. I’ll definitely be coming back!"</p>
+                <h3>- Asifa A.</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY SECTION -->
+    <section id="gallery">
+        <h2 class="section-title">Our Restaurant Ambiance</h2>
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="gallery.jpg" alt="Gallery Item 1">
+            </div>
+            <div class="gallery-item">
+                <img src="gallery2.jpg" alt="Gallery Item 2">
+            </div>
+            <div class="gallery-item">
+                <img src="gallery3.jpg" alt="Gallery Item 3">
+            </div>
+            <div class="gallery-item">
+                <img src="gallery4.jpg" alt="Gallery Item 4">
+            </div>
+        </div>
+    </section>
+    <!--blog section-->
+ <section class="bloger">
+    
+        <h5 class="h5">Blog</h5>
+    <div class="container">
+        <div class="card">
+          <div class="Box">
+            <img src="blog1.jpg">
+            
+          </div>
+          <div class="details">
+            <h2>Resturant News</h2>
+            <p>consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="Box">
+            <img src="blog2.jpg" style="height: 200px;">
+          </div>
+          <div class="details">
+            <h2>Recipes</h2>
+            <p>Our most-loved zucchini slice recipe ever While the argument as to what is Australia’s national dish will always rage (is it roast lamb, green chicken curry or a barramundi burger)? One thing is for sure, zucchini slice is hands-down the </p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="Box">
+            <img src="blog3.jpg">
+          </div>
+          <div class="details">
+            <h2>Events</h2>
+            <p>Our most-loved zucchini slice recipe ever While the argument as to what is Australia’s national dish will always rage (is it roast lamb, green chicken curry or a barramundi burger)? One thing is for sure, zucchini slice is hands-down the</p>
+          </div>
+        </div>
+      </div>
+      
+    <button class="blog">Know more..</button>
+ </section>
+    <!--reservation-->
+    <div class="main-container">
+    <div class="content">
+      <h1 class="fade-in">Reserve Your Table</h1>
+      <p class="subtext">Book your table at our restaurant and enjoy the experience!</p>
+      <form id="booking-form" class="slide-in">
+        <div class="form-group">
+          <label for="name"><i class="fas fa-user"></i> Name:</label>
+          <input type="text" id="name" name="name" placeholder="Enter your name" required>
+        </div>
+        <div class="form-group">
+          <label for="email"><i class="fas fa-envelope"></i> Email:</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        </div>
+        <div class="form-group">
+          <label for="date"><i class="fas fa-calendar-alt"></i> Date:</label>
+          <input type="date" id="date" name="date" required>
+        </div>
+        <div class="form-group">
+          <label for="time"><i class="fas fa-clock"></i> Time:</label>
+          <input type="time" id="time" name="time" required>
+        </div>
+        <div class="form-group">
+          <label for="guests"><i class="fas fa-users"></i> Number of Guests:</label>
+          <input type="number" id="guests" name="guests" min="1" max="20" required>
+        </div>
+        <button type="button" id="book-now" class="pulse" ><a href="http://127.0.0.1:5501/redirect.html">Book Now</a></button>
+      </form>
+    </div>
+  </div>
+   
+    <!-- Footer Section -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-about">
+            <h3>About Us</h3>
+            <p>Recipe & Cooking is your go-to source for delicious recipes and cooking tips. Explore new flavors and find inspiration for every meal.</p>
+        </div>
+        <div class="footer-contact">
+            <h3>Contact Us</h3>
+            <p>Email: BiteBuzz@gmail.com</p>
+            <p>Phone: +92 301234567</p>
+            <p>Follow Us:</p>
+            <div class="social-icons">
+                <a href="#"><img src="https://freepnglogo.com/images/all_img/facebook-circle-logo-png.png" alt="Facebook"></a>
+                <a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGQTwZv2FNsXbLA7zIZrOozlz8wcc9S4UKQQ&s" alt="Twitter"></a>
+                <a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQABaw-8tzQkr6PAvvoGqfJ0kA54VUyXP9gvw&s" alt="Instagram"></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Recipe & Cooking. All Rights Reserved.</p>
+    </div>
+</footer>
+
+
+</body>
+</html>
